@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MOKEPON!</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="seleccionar-mascota">
+        <h1 class="titulo">MokepoN 🔥💧🌱</h1>
+        <h2 class="subtitulo">Elige a tu mascota:</h2>
+        <div id='contenedor-tarjetas' class="tarjetas">
+            <!-- El contenido de las tarjetas se genera dinámicamente desde tu archivo JavaScript -->
+        </div>
+        <button class="boton-seleccionar" id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h1 class="titulo">MokepoN 🔥💧🌱</h1>
+        <h2 class="subtitulo">Elige tu ataque :</h2>
+        <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">0</span> victorias</p>
+        <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">0</span> victorias</p>
+        <div id='contenedor-ataques' class="botones-ataques"></div>
+        <div id="ataques-del-jugador"></div>
+        <div id="ataques-del-enemigo"></div>
+    </section>
+
+    <section id="ver-mapa">
+        <h1 class="titulo">Recorre el mapa con tu MokepoN</h1>
+        <canvas id="mapa"></canvas>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <div>
+            <button onmouseup="detenerMovimiento()"onmousedown="moverIzquierda()">Izquierda</button>
+            <button onmouseup="detenerMovimiento()"onmousedown="moverAbajo()">Abajo</button>
+            <button onmouseup="detenerMovimiento()"onmousedown="moverDerecha()">Derecha</button>
+        </div>
+    </section>
+
+    <section id="mensajes"></section>
+
+    <section id="Reiniciar">
+        <button id="boton-reinicar">Reiniciar</button>
+    </section>
+    
+    <script src="./js/mokepon.js"></script>
+</body>
+</html>
